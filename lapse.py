@@ -14,7 +14,7 @@ def timer(duration):
     while(act < duration):
         mins = int((duration - act)/60)
         secs = (duration - act) - (mins*60)
-        #TODO: salen varias g cuando los numeros son mas pequeños que 10 -> remainingg
+        #TODO: error -> remainingg
         print("lapse{}> {} minute(s) and {} second(s) remaining".format(n, mins, secs), end="\r")
         time.sleep(1)
         act+=1
