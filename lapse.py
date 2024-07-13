@@ -3,6 +3,7 @@ import os
 
 global n
 n = 0
+LINE_CLEAR = '\x1b[2K'
 
 def notify(title, text):
     os.system("""
@@ -14,7 +15,7 @@ def timer(duration):
     while(act < duration):
         mins = int((duration - act)/60)
         secs = (duration - act) - (mins*60)
-        #TODO: error -> remainingg
+        print(end=LINE_CLEAR)
         print("lapse{}> {} minute(s) and {} second(s) remaining".format(n, mins, secs), end="\r")
         time.sleep(1)
         act+=1
